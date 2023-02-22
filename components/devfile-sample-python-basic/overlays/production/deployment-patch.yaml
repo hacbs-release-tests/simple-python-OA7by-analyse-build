@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-python-basic
+  namespace: managed-release-team-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/scoheb/user-workload@sha256:fffd8c0c3f58bb09d489ae15ab20e9be5c1dee2f4d40522f0fa8abc84d1b300d
+        name: my-python
+        resources: {}
+status: {}
